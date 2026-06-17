@@ -14,3 +14,4 @@ favorites = {
     "hobie": "dancing"
 }
 print(favorites)
+
