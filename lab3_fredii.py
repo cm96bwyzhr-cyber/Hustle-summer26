@@ -145,3 +145,7 @@ print(profile.get("age"))
 # Ticket 10
 
 print(f"{profile['username']} has {profile['followers']} followers and {len(feed)} post. Top post: {feed[0]}")
+
+# i predicted that it will print my username, followers count, number of the posts, and the first post in a sentence.
+
+#i used the profile dictionary to get the username and the follower count and the rest of the profile that was there.
