@@ -59,7 +59,7 @@ def can_access(age):
     else:
         return False
 
-ages = [17, 11, 25, 13, 9]
+ages = [13, 15, 25, 10,8]
 
 for age in ages:
     if can_access(age):
@@ -72,9 +72,9 @@ for age in ages:
 
 # Ticekt 5
 
-
 def can_access(age):
     return age >= 13
+
 
 def signup_report(ages):
     print("--- StreamPass Signup Report ---")
@@ -83,14 +83,16 @@ def signup_report(ages):
 
     for number, age in enumerate(ages, start=1):
         if can_access(age):
-            print(f"Signup #{number} | Age {age} — Access granted ")
+            print(f"Signup #{number} | Age {age} — Access granted ✅")
             approved += 1
         else:
-            print(f"Signup #{number} | Age {age} — Too young ")
+            print(f"Signup #{number} | Age {age} — Too young ❌")
 
     print(f"Approved: {approved} out of {len(ages)}")
 
-signups = [22, 10, 15, 8, 19, 13]
+
+signups = [13, 15, 25, 10,8]
 signup_report(signups)
+
 # The expected output is shown above. There are 4 approved out of 6 signups because the ages 22, 15, 19, and 13 are all 13 or older.
 #I used the functions, parameters, a list, a for loop with enumerate(), if/else statements, a counter variable (approved), len() to count the total signups, and f-strings to format the output.
