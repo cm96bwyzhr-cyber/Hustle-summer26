@@ -1,3 +1,4 @@
+import random
 
 # ticket 1 Item blueprint Own tab
 
@@ -21,8 +22,9 @@ class book():
     # Ticket 5- polymorphism
     def deliver(self):
         print(f"{self.name} is being shipped to the customer.!")
-        
     
+    
+        
 
 
 # Ticket 4 -Second Kind of Item (Inheritance)
@@ -35,6 +37,11 @@ class Slide(book):
 
 item1 = book("Harry poter", 10)
 item2 = Slide("avatar", 150)
+
+
+# Extension Ticket 2 - Sale
+item2.set_price(100)
+print(item2.name, "is on sale for $", item2.price)
 
 
 
@@ -54,6 +61,7 @@ class Cart:
         self.items.append(item)
         print(item.name, "added!")
 
+
     # Ticket 9
     def checkout(self):
         total = 0
@@ -66,6 +74,7 @@ class Cart:
 
         print("Total: $", total)
 
+
 #Ticket 7
 # Ticket 7
 store = {
@@ -75,9 +84,29 @@ store = {
 
 cart = Cart()
 
+
+# Extension Ticket 1 - Random Welcome
+welcome_messages = [
+    "Hey there, happy shopping!",
+    "Welcome to our store!",
+    "Thanks for shopping with us!"
+]
+
+print(random.choice(welcome_messages))
+
+
+# Extension Ticket 3 - Show Menu
+print("\nHere is what we have:")
+
+for number, item in store.items():
+    print(number + ": " + item.name + " - $" + str(item.price))
+
+
 # Ask for the customer's name BEFORE the shopping starts
 customer = input("What is your name? ")
 print("Welcome,", customer + "!")
+
+
 
 # Ticket 8
 while True:
@@ -90,11 +119,28 @@ while True:
         cart.add(store[choice])
 
     else:
-        print("Invalid choice.")
+        # Extension Ticket 4
+        print("Sorry, that's not on the menu!")
+
+
+
+# Extension Ticket 5 - Receipt
+print("----- Your receipt -----")
+
+for item in cart.items:
+    print(item.name + " ..... $" + str(item.price))
+
+
+# Extension Ticket 6 - Count Order
+print("You bought " + str(len(cart.items)) + " items.")
+
+
 
 # These lines go AFTER the while loop ends
 cart.checkout()
 print("Thank you for shopping with us,", customer + "!")
+
+
 
 #ticket 8
 while True:
@@ -108,6 +154,7 @@ while True:
 
     else:
         print("Invalid choice.")
+
 
 # Ticket 9
     
