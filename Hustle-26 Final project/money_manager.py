@@ -54,3 +54,19 @@ class Clothing(ShoppingItem):
         print(f"Size: {self.size}")
 
 
+#=======================================================================================================
+#|| Kind 2                                                                                            ||
+#|| The second kind. Same deal, but a different extra detail so it acts a little different from Kind 1||
+#=======================================================================================================
+
+class Electronics(ShoppingItem):
+    def __init__(self, name, price, brand):
+        super().__init__(name, price)
+        self.brand = brand
+
+    def display(self):
+        print("===== Electronics =====")
+        super().display()
+        print(f"Brand: {self.brand}")
+
+
