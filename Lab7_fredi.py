@@ -22,10 +22,6 @@ class book():
     # Ticket 5- polymorphism
     def deliver(self):
         print(f"{self.name} is being shipped to the customer.!")
-    
-    
-        
-
 
 # Ticket 4 -Second Kind of Item (Inheritance)
 class Slide(book):
@@ -36,7 +32,7 @@ class Slide(book):
 # TICKET 2 - Real Items
 
 item1 = book("Harry poter", 10)
-item2 = Slide("avatar", 150)
+item2 = Slide("avatar", 100)
 
 
 # Extension Ticket 2 - Sale
@@ -96,7 +92,7 @@ print(random.choice(welcome_messages))
 
 
 # Extension Ticket 3 - Show Menu
-print("\nHere is what we have:")
+print("Here is what we have:")
 
 for number, item in store.items():
     print(number + ": " + item.name + " - $" + str(item.price))
