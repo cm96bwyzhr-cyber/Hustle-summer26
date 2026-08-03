@@ -22,6 +22,9 @@ class book():
     # Ticket 5- polymorphism
     def deliver(self):
         print(f"{self.name} is being shipped to the customer.!")
+        
+    
+
 
 # Ticket 4 -Second Kind of Item (Inheritance)
 class Slide(book):
@@ -32,12 +35,7 @@ class Slide(book):
 # TICKET 2 - Real Items
 
 item1 = book("Harry poter", 10)
-item2 = Slide("avatar", 100)
-
-
-# Extension Ticket 2 - Sale
-item2.set_price(100)
-print(item2.name, "is on sale for $", item2.price)
+item2 = Slide("avatar", 150)
 
 
 
@@ -80,27 +78,11 @@ store = {
 
 cart = Cart()
 
-
-# Extension Ticket 1 - Random Welcome
-welcome_messages = [
-    "Hey there, happy shopping!",
-    "Welcome to our store!",
-    "Thanks for shopping with us!"
-]
-
-print(random.choice(welcome_messages))
-
-
-# Extension Ticket 3 - Show Menu
-print("Here is what we have:")
-
-for number, item in store.items():
-    print(number + ": " + item.name + " - $" + str(item.price))
-
-
 # Ask for the customer's name BEFORE the shopping starts
 customer = input("What is your name? ")
 print("Welcome,", customer + "!")
+
+
 
 # Ticket 8
 while True:
@@ -133,6 +115,8 @@ print("You bought " + str(len(cart.items)) + " items.")
 # These lines go AFTER the while loop ends
 cart.checkout()
 print("Thank you for shopping with us,", customer + "!")
+
+
 
 #ticket 8
 while True:
